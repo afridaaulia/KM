@@ -1,12 +1,3 @@
-Tentu, seluruh latar belakang halaman telah diubah menjadi terang.
-
-Untuk mencapai ini, warna dasar `<body>` diubah menjadi putih, dan warna teks diubah menjadi gelap agar mudah dibaca. Elemen lain seperti header, kartu, dan footer juga telah disesuaikan dengan tema terang yang baru.
-
------
-
-### Kode HTML dengan Tema Terang
-
-```html
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
@@ -21,20 +12,16 @@ Untuk mencapai ini, warna dasar `<body>` diubah menjadi putih, dan warna teks di
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Custom styles for better visual appeal */
         .hero-gradient {
             background: linear-gradient(45deg, #1e3a8a, #447D9B);
         }
         .section-title {
-            /* Diubah untuk tema terang */
             @apply text-3xl font-bold text-slate-800 mb-2;
         }
         .section-subtitle {
-             /* Diubah untuk tema terang */
             @apply text-lg text-slate-500 mb-12 max-w-3xl mx-auto;
         }
         .card {
-            /* Diubah untuk tema terang */
             @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
         }
     </style>
