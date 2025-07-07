@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -20,7 +20,7 @@
             @apply text-3xl font-bold text-slate-800 mb-2;
         }
         .section-subtitle {
-            @apply text-lg text-slate-500 mb-12 max-w-2xl mx-auto;
+            @apply text-lg text-slate-500 mb-12 max-w-3xl mx-auto;
         }
         .card {
             @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
@@ -37,6 +37,7 @@
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="#konsep" class="text-slate-600 hover:text-blue-600 transition">Konsep</a>
                     <a href="#manfaat" class="text-slate-600 hover:text-blue-600 transition">Manfaat</a>
+                    <a href="#komponen" class="text-slate-600 hover:text-blue-600 transition">Komponen</a>
                     <a href="#proses" class="text-slate-600 hover:text-blue-600 transition">Proses</a>
                     <a href="#tools" class="text-slate-600 hover:text-blue-600 transition">Tools</a>
                     <a href="#tantangan" class="text-slate-600 hover:text-blue-600 transition">Tantangan</a>
@@ -52,6 +53,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <a href="#konsep" class="block py-3 px-4 text-slate-600 hover:bg-slate-50 hover:text-blue-600">Konsep</a>
             <a href="#manfaat" class="block py-3 px-4 text-slate-600 hover:bg-slate-50 hover:text-blue-600">Manfaat</a>
+            <a href="#komponen" class="block py-3 px-4 text-slate-600 hover:bg-slate-50 hover:text-blue-600">Komponen</a>
             <a href="#proses" class="block py-3 px-4 text-slate-600 hover:bg-slate-50 hover:text-blue-600">Proses</a>
             <a href="#tools" class="block py-3 px-4 text-slate-600 hover:bg-slate-50 hover:text-blue-600">Tools</a>
             <a href="#tantangan" class="block py-3 px-4 text-slate-600 hover:bg-slate-50 hover:text-blue-600">Tantangan</a>
@@ -86,6 +88,10 @@
                             <div>
                                 <h4 class="font-semibold text-blue-600">Explicit Knowledge</h4>
                                 <p class="text-slate-600">Pengetahuan yang telah didokumentasikan dan mudah dibagikan. Berbentuk buku, laporan, jurnal, atau database.</p>
+                            </div>
+                             <div>
+                                <h4 class="font-semibold text-blue-600">Potential Knowledge</h4>
+                                <p class="text-slate-600">Pengetahuan yang digunakan untuk melakukan analisis data dan mengubah data menjadi sebuah pengetahuan baru.</p>
                             </div>
                         </div>
                     </div>
@@ -168,8 +174,42 @@
             </div>
         </section>
 
+        <!-- Section: Komponen KM -->
+        <section id="komponen" class="py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="section-title">Tiga Komponen Kunci KM</h2>
+                <p class="section-subtitle">Keberhasilan Knowledge Management ditopang oleh tiga komponen utama yang saling terkait, dengan porsi upaya yang berbeda.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card text-center">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-purple-100 text-purple-600 mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800">People</h3>
+                        <p class="text-4xl font-extrabold text-purple-600 my-2">70%</p>
+                        <p class="text-slate-600">Individu dengan kompetensi dan perannya menjadi faktor terpenting dalam berbagi, inovasi, dan motivasi.</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-sky-100 text-sky-600 mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800">Process</h3>
+                        <p class="text-4xl font-extrabold text-sky-600 my-2">20%</p>
+                        <p class="text-slate-600">Proses yang jelas mempermudah transfer, pemetaan, dan aliran pengetahuan agar dapat dimanfaatkan secara efisien.</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-amber-100 text-amber-600 mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800">Technology</h3>
+                        <p class="text-4xl font-extrabold text-amber-600 my-2">10%</p>
+                        <p class="text-slate-600">Teknologi berperan sebagai pendukung untuk menangkap, menyimpan, dan mempermudah penggunaan informasi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Section: Proses Inti -->
-        <section id="proses" class="py-20">
+        <section id="proses" class="py-20 bg-white">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="section-title">Proses Inti KM</h2>
                 <p class="section-subtitle">Langkah-langkah fundamental dalam siklus hidup manajemen pengetahuan, dari identifikasi hingga pemanfaatan.</p>
@@ -180,42 +220,42 @@
                     <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-8 relative">
                         <div class="text-center">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">1</div>
+                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold ring-4 ring-white">1</div>
                             </div>
                             <h4 class="font-semibold">Identifikasi</h4>
                             <p class="text-sm text-slate-500">Menganalisis dan memetakan knowledge yang ada.</p>
                         </div>
                         <div class="text-center">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">2</div>
+                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold ring-4 ring-white">2</div>
                             </div>
                             <h4 class="font-semibold">Akuisisi</h4>
                             <p class="text-sm text-slate-500">Mengumpulkan data dan pengetahuan dari berbagai sumber.</p>
                         </div>
                         <div class="text-center">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">3</div>
+                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold ring-4 ring-white">3</div>
                             </div>
                             <h4 class="font-semibold">Pengembangan</h4>
                             <p class="text-sm text-slate-500">Menciptakan pengetahuan dan kemampuan baru.</p>
                         </div>
                         <div class="text-center">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">4</div>
+                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold ring-4 ring-white">4</div>
                             </div>
                             <h4 class="font-semibold">Distribusi</h4>
                             <p class="text-sm text-slate-500">Membagikan dan menyebarkan pengetahuan ke seluruh organisasi.</p>
                         </div>
                         <div class="text-center">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">5</div>
+                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold ring-4 ring-white">5</div>
                             </div>
                             <h4 class="font-semibold">Pemanfaatan</h4>
                             <p class="text-sm text-slate-500">Memastikan pengetahuan digunakan secara produktif.</p>
                         </div>
                         <div class="text-center">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">6</div>
+                                <div class="mx-auto w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold ring-4 ring-white">6</div>
                             </div>
                             <h4 class="font-semibold">Penyimpanan</h4>
                             <p class="text-sm text-slate-500">Memilih, menyimpan, dan memperbarui pengetahuan.</p>
@@ -226,7 +266,7 @@
         </section>
 
         <!-- Section: IT-Based Tools -->
-        <section id="tools" class="py-20 bg-white">
+        <section id="tools" class="py-20">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="section-title">Tools Berbasis IT</h2>
                 <p class="section-subtitle">Teknologi yang mendukung dan memfasilitasi penerapan Knowledge Management di organisasi.</p>
@@ -268,11 +308,11 @@
         </section>
 
         <!-- Section: Tantangan Implementasi -->
-        <section id="tantangan" class="py-20">
+        <section id="tantangan" class="py-20 bg-white">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="section-title">Tantangan Implementasi KM</h2>
                 <p class="section-subtitle">Faktor-faktor penentu keberhasilan dan masalah yang sering dihadapi saat menerapkan Knowledge Management.</p>
-                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+                <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center">
                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
@@ -307,6 +347,24 @@
                         <div>
                             <h4 class="font-semibold text-lg">Integrasi Proses</h4>
                             <p>KM harus terhubung dengan proses bisnis yang sudah ada agar relevan.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Budaya Belajar</h4>
+                            <p>Implementasi KM adalah proses belajar berkelanjutan yang harus dipelihara.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" /></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Teknologi Baru</h4>
+                            <p>Potensi teknologi baru hanya bisa berkembang jika didukung budaya organisasi.</p>
                         </div>
                     </div>
                 </div>
