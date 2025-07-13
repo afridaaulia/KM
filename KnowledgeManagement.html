@@ -13,34 +13,35 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            /* Latar belakang gradien baru untuk tampilan yang lebih menarik */
-            background-color: #030712; /* Fallback */
+            background-color: #030712;
             background-image: linear-gradient(170deg, #111827 0%, #030712 100%);
-            color: #cbd5e1; /* Sedikit mencerahkan teks default */
+            color: #cbd5e1;
         }
         .hero-gradient {
-            /* Gradien animasi untuk bagian hero */
             background: linear-gradient(-45deg, #6d28d9, #0d9488, #2563eb, #d946ef);
             background-size: 400% 400%;
             animation: gradient-animation 15s ease infinite;
         }
-
-        /* Animasi untuk gradien */
         @keyframes gradient-animation {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
         .section-title {
             @apply text-3xl font-extrabold text-slate-100 mb-3;
         }
         .section-subtitle {
-            @apply text-lg font-semibold text-slate-300 mb-12 max-w-3xl mx-auto; /* Mencerahkan teks subjudul */
+            @apply text-lg font-semibold text-slate-300 mb-12 max-w-3xl mx-auto;
         }
         .card {
-            /* Menambahkan efek blur dan border pada kartu */
             @apply bg-gray-800/60 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 transition-all duration-300 border border-gray-700 hover:border-violet-500/50;
+        }
+        /* Gaya untuk langkah proses yang aktif */
+        .proses-step.active .proses-circle {
+            @apply ring-teal-400 scale-110 bg-teal-400;
+        }
+        .proses-step.active h4 {
+            @apply text-teal-400;
         }
     </style>
 </head>
@@ -137,7 +138,7 @@
         </section>
 
         <!-- Manfaat Section -->
-        <section id="manfaat" class="py-20 bg-gray-900/30">
+        <section id="manfaat" class="py-20 bg-gray-900/40 backdrop-blur-sm">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="section-title"><strong>Manfaat & Tujuan</strong></h2>
                 <p class="section-subtitle"><strong>Mengapa Knowledge Management penting? Temukan manfaat nyata dan tujuan strategis dari penerapannya.</strong></p>
@@ -223,57 +224,61 @@
         </section>
 
         <!-- Proses Section -->
-        <section id="proses" class="py-20 bg-gray-900/30">
+        <section id="proses" class="py-20 bg-gray-900/40 backdrop-blur-sm">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="section-title"><strong>Proses Inti KM</strong></h2>
                 <p class="section-subtitle"><strong>Langkah-langkah fundamental dalam siklus hidup manajemen pengetahuan, dari identifikasi hingga pemanfaatan.</strong></p>
                 <div class="relative">
                     <div class="hidden md:block absolute top-5 left-0 w-full h-0.5 bg-gray-700"></div>
                     
-                    <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-8 relative">
-                        <div class="text-center">
+                    <div id="proses-timeline" class="grid md:grid-cols-3 lg:grid-cols-6 gap-8 relative">
+                        <!-- Step 1 -->
+                        <div class="proses-step text-center cursor-pointer" data-description="Langkah awal ini berfokus pada analisis mendalam untuk memetakan pengetahuan apa yang sudah ada di dalam organisasi, siapa yang memilikinya, dan di mana letaknya. Tujuannya adalah untuk memahami aset intelektual yang ada dan mengidentifikasi kesenjangan pengetahuan yang perlu diisi.">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800">1</div>
+                                <div class="proses-circle mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800 transition-all duration-300">1</div>
                             </div>
-                            <h4 class="font-semibold text-slate-100">Identifikasi</h4>
-                            <p class="text-sm text-slate-400">Menganalisis dan memetakan knowledge yang ada.</p>
+                            <h4 class="font-semibold text-slate-100 transition-colors duration-300">Identifikasi</h4>
                         </div>
-                        <div class="text-center">
+                        <!-- Step 2 -->
+                        <div class="proses-step text-center cursor-pointer" data-description="Setelah pengetahuan diidentifikasi, langkah selanjutnya adalah mengumpulkannya. Ini bisa berasal dari sumber internal (seperti karyawan atau dokumen) atau eksternal (seperti konsultan, publikasi, atau mitra). Proses ini melibatkan pengumpulan data, informasi, dan pengalaman yang relevan.">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800">2</div>
+                                <div class="proses-circle mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800 transition-all duration-300">2</div>
                             </div>
-                            <h4 class="font-semibold text-slate-100">Akuisisi</h4>
-                            <p class="text-sm text-slate-400">Mengumpulkan data dan pengetahuan dari berbagai sumber.</p>
+                            <h4 class="font-semibold text-slate-100 transition-colors duration-300">Akuisisi</h4>
                         </div>
-                        <div class="text-center">
+                        <!-- Step 3 -->
+                        <div class="proses-step text-center cursor-pointer" data-description="Proses ini berfokus pada penciptaan pengetahuan baru. Ini sering terjadi melalui kolaborasi, brainstorming, penelitian dan pengembangan (R&D), atau pembelajaran dari pengalaman dan kegagalan. Tujuannya adalah untuk terus berinovasi dan membangun kapabilitas baru.">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800">3</div>
+                                <div class="proses-circle mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800 transition-all duration-300">3</div>
                             </div>
-                            <h4 class="font-semibold text-slate-100">Pengembangan</h4>
-                            <p class="text-sm text-slate-400">Menciptakan pengetahuan dan kemampuan baru.</p>
+                            <h4 class="font-semibold text-slate-100 transition-colors duration-300">Pengembangan</h4>
                         </div>
-                        <div class="text-center">
+                        <!-- Step 4 -->
+                        <div class="proses-step text-center cursor-pointer" data-description="Pengetahuan yang telah dikumpulkan dan dikembangkan harus dibagikan agar bermanfaat. Langkah ini melibatkan penyebaran pengetahuan kepada orang yang tepat pada waktu yang tepat melalui berbagai saluran, seperti portal intranet, komunitas praktik (CoP), lokakarya, atau sistem manajemen dokumen.">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800">4</div>
+                                <div class="proses-circle mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800 transition-all duration-300">4</div>
                             </div>
-                            <h4 class="font-semibold text-slate-100">Distribusi</h4>
-                            <p class="text-sm text-slate-400">Membagikan dan menyebarkan pengetahuan ke seluruh organisasi.</p>
+                            <h4 class="font-semibold text-slate-100 transition-colors duration-300">Distribusi</h4>
                         </div>
-                        <div class="text-center">
+                        <!-- Step 5 -->
+                        <div class="proses-step text-center cursor-pointer" data-description="Ini adalah inti dari knowledge management. Pengetahuan harus diterapkan dalam pekerjaan sehari-hari untuk meningkatkan kinerja, membuat keputusan yang lebih baik, dan memecahkan masalah. Tujuannya adalah untuk mengubah pengetahuan menjadi tindakan yang bernilai.">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800">5</div>
+                                <div class="proses-circle mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800 transition-all duration-300">5</div>
                             </div>
-                            <h4 class="font-semibold text-slate-100">Pemanfaatan</h4>
-                            <p class="text-sm text-slate-400">Memastikan pengetahuan digunakan secara produktif.</p>
+                            <h4 class="font-semibold text-slate-100 transition-colors duration-300">Pemanfaatan</h4>
                         </div>
-                        <div class="text-center">
+                        <!-- Step 6 -->
+                        <div class="proses-step text-center cursor-pointer" data-description="Langkah terakhir adalah menyimpan pengetahuan dalam format yang terstruktur agar mudah diakses dan digunakan kembali di masa depan. Ini melibatkan pemilihan, pengorganisasian, dan pembaruan pengetahuan dalam repositori seperti database, wiki, atau sistem manajemen pengetahuan.">
                             <div class="relative mb-4">
-                                <div class="mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800">6</div>
+                                <div class="proses-circle mx-auto w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold ring-4 ring-gray-800 transition-all duration-300">6</div>
                             </div>
-                            <h4 class="font-semibold text-slate-100">Penyimpanan</h4>
-                            <p class="text-sm text-slate-400">Memilih, menyimpan, dan memperbarui pengetahuan.</p>
+                            <h4 class="font-semibold text-slate-100 transition-colors duration-300">Penyimpanan</h4>
                         </div>
                     </div>
+                </div>
+                <!-- Description Box -->
+                <div id="proses-description" class="mt-12 max-w-3xl mx-auto p-6 bg-gray-800/70 rounded-lg text-left min-h-[100px] transition-all duration-300">
+                    <p class="text-slate-300">Klik pada salah satu langkah di atas untuk melihat detailnya.</p>
                 </div>
             </div>
         </section>
@@ -321,7 +326,7 @@
         </section>
 
         <!-- Tantangan Section -->
-        <section id="tantangan" class="py-20 bg-gray-900/30">
+        <section id="tantangan" class="py-20 bg-gray-900/40 backdrop-blur-sm">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="section-title"><strong>Tantangan Implementasi KM</strong></h2>
                 <p class="section-subtitle"><strong>Faktor-faktor penentu keberhasilan dan masalah yang sering dihadapi saat menerapkan Knowledge Management.</strong></p>
@@ -336,7 +341,7 @@
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-yellow-500/20 text-yellow-400 flex items-center justify-center">
                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
                         </div>
                         <div>
@@ -345,7 +350,7 @@
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center">
                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
                         </div>
                         <div>
@@ -354,7 +359,7 @@
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center">
                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                         </div>
                         <div>
@@ -363,7 +368,7 @@
                         </div>
                     </div>
                      <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
                         </div>
                         <div>
@@ -372,7 +377,7 @@
                         </div>
                     </div>
                      <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center">
                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" /></svg>
                         </div>
                         <div>
@@ -405,13 +410,31 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
         const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
         for (let i = 0; i < mobileMenuLinks.length; i++) {
             mobileMenuLinks[i].addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         }
+
+        // JavaScript for interactive process timeline
+        const prosesSteps = document.querySelectorAll('.proses-step');
+        const prosesDescription = document.getElementById('proses-description');
+        const initialDescription = prosesDescription.innerHTML;
+
+        prosesSteps.forEach(step => {
+            step.addEventListener('click', () => {
+                // Hapus kelas aktif dari semua langkah
+                prosesSteps.forEach(s => s.classList.remove('active'));
+                
+                // Tambahkan kelas aktif ke langkah yang diklik
+                step.classList.add('active');
+                
+                // Perbarui kotak deskripsi
+                const descriptionText = step.getAttribute('data-description');
+                prosesDescription.innerHTML = `<p class="text-slate-300">${descriptionText}</p>`;
+            });
+        });
     </script>
 
 </body>
