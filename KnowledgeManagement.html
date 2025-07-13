@@ -13,35 +13,51 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            /* Latar belakang gradien baru untuk tampilan yang lebih menarik */
+            background-color: #030712; /* Fallback */
+            background-image: linear-gradient(170deg, #111827 0%, #030712 100%);
+            color: #cbd5e1; /* Sedikit mencerahkan teks default */
         }
         .hero-gradient {
-            background: linear-gradient(45deg, #6d28d9, #0d9488);
+            /* Gradien animasi untuk bagian hero */
+            background: linear-gradient(-45deg, #6d28d9, #0d9488, #2563eb, #d946ef);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
         }
+
+        /* Animasi untuk gradien */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .section-title {
             @apply text-3xl font-extrabold text-slate-100 mb-3;
         }
         .section-subtitle {
-            @apply text-lg font-semibold text-slate-400 mb-12 max-w-3xl mx-auto;
+            @apply text-lg font-semibold text-slate-300 mb-12 max-w-3xl mx-auto; /* Mencerahkan teks subjudul */
         }
         .card {
-            @apply bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 transition-shadow duration-300;
+            /* Menambahkan efek blur dan border pada kartu */
+            @apply bg-gray-800/60 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-violet-500/20 transition-all duration-300 border border-gray-700 hover:border-violet-500/50;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-slate-300">
+<body class="text-slate-300">
 
     <!-- Header and Navigation -->
-    <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm shadow-gray-700">
+    <header class="bg-gray-900/50 backdrop-blur-lg sticky top-0 z-50 shadow-sm shadow-gray-700 border-b border-gray-800">
         <div class="container mx-auto px-4">
             <nav class="flex justify-between items-center py-4">
-                <a href="#" class="text-xl font-bold text-teal-500">KM Website</a>
+                <a href="#" class="text-xl font-bold text-teal-400">KM Website</a>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#konsep" class="text-slate-300 hover:text-teal-500 transition font-bold">Konsep</a>
-                    <a href="#manfaat" class="text-slate-300 hover:text-teal-500 transition font-bold">Manfaat</a>
-                    <a href="#komponen" class="text-slate-300 hover:text-teal-500 transition font-bold">Komponen</a>
-                    <a href="#proses" class="text-slate-300 hover:text-teal-500 transition font-bold">Proses</a>
-                    <a href="#tools" class="text-slate-300 hover:text-teal-500 transition font-bold">Tools</a>
-                    <a href="#tantangan" class="text-slate-300 hover:text-teal-500 transition font-bold">Tantangan</a>
+                    <a href="#konsep" class="text-slate-300 hover:text-teal-400 transition font-bold">Konsep</a>
+                    <a href="#manfaat" class="text-slate-300 hover:text-teal-400 transition font-bold">Manfaat</a>
+                    <a href="#komponen" class="text-slate-300 hover:text-teal-400 transition font-bold">Komponen</a>
+                    <a href="#proses" class="text-slate-300 hover:text-teal-400 transition font-bold">Proses</a>
+                    <a href="#tools" class="text-slate-300 hover:text-teal-400 transition font-bold">Tools</a>
+                    <a href="#tantangan" class="text-slate-300 hover:text-teal-400 transition font-bold">Tantangan</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-slate-300 hover:bg-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -51,13 +67,13 @@
             </nav>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
-            <a href="#konsep" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-500">Konsep</a>
-            <a href="#manfaat" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-500">Manfaat</a>
-            <a href="#komponen" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-500">Komponen</a>
-            <a href="#proses" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-500">Proses</a>
-            <a href="#tools" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-500">Tools</a>
-            <a href="#tantangan" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-500">Tantangan</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/90 backdrop-blur-sm border-t border-gray-700">
+            <a href="#konsep" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-400">Konsep</a>
+            <a href="#manfaat" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-400">Manfaat</a>
+            <a href="#komponen" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-400">Komponen</a>
+            <a href="#proses" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-400">Proses</a>
+            <a href="#tools" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-400">Tools</a>
+            <a href="#tantangan" class="block py-3 px-4 text-slate-300 hover:bg-gray-700 hover:text-teal-400">Tantangan</a>
         </div>
     </header>
 
@@ -67,7 +83,7 @@
             <div class="container mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Knowledge Management</h1>
                 <p class="text-xl md:text-2xl font-light mb-8 max-w-3xl mx-auto">Konsep dan Metodologi untuk Mengelola Aset Pengetahuan Organisasi</p>
-                <a href="#konsep" class="bg-white text-teal-600 font-bold py-3 px-8 rounded-full hover:bg-slate-100 transition-colors duration-300">Pelajari Lebih Lanjut</a>
+                <a href="#konsep" class="bg-white text-teal-600 font-bold py-3 px-8 rounded-full hover:bg-slate-100 transition-colors duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105">Pelajari Lebih Lanjut</a>
             </div>
         </section>
 
@@ -121,7 +137,7 @@
         </section>
 
         <!-- Manfaat Section -->
-        <section id="manfaat" class="py-20 bg-gray-800">
+        <section id="manfaat" class="py-20 bg-gray-900/30">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="section-title"><strong>Manfaat & Tujuan</strong></h2>
                 <p class="section-subtitle"><strong>Mengapa Knowledge Management penting? Temukan manfaat nyata dan tujuan strategis dari penerapannya.</strong></p>
@@ -207,7 +223,7 @@
         </section>
 
         <!-- Proses Section -->
-        <section id="proses" class="py-20 bg-gray-800">
+        <section id="proses" class="py-20 bg-gray-900/30">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="section-title"><strong>Proses Inti KM</strong></h2>
                 <p class="section-subtitle"><strong>Langkah-langkah fundamental dalam siklus hidup manajemen pengetahuan, dari identifikasi hingga pemanfaatan.</strong></p>
@@ -305,7 +321,7 @@
         </section>
 
         <!-- Tantangan Section -->
-        <section id="tantangan" class="py-20 bg-gray-800">
+        <section id="tantangan" class="py-20 bg-gray-900/30">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="section-title"><strong>Tantangan Implementasi KM</strong></h2>
                 <p class="section-subtitle"><strong>Faktor-faktor penentu keberhasilan dan masalah yang sering dihadapi saat menerapkan Knowledge Management.</strong></p>
@@ -371,7 +387,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700 text-slate-400 py-12">
+    <footer class="bg-gray-900/50 border-t border-gray-800 text-slate-400 py-12">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 Website Knowledge Management. Dibuat berdasarkan Jurnal "Knowledge Management: Konsep dan Metodologi".</p>
             <p>source: Suparto Darudiato, Kevin Setiawan.
