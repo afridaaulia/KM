@@ -1,0 +1,192 @@
+digraph Kerangka_Berpikir {
+    rankdir=TB;
+    fontsize=16;
+    fontname="Arial";
+    splines=ortho;
+
+    node [
+        shape=box,
+        style=filled,
+        fontname="Arial",
+        fontsize=15
+    ];
+
+    /* ===============================
+       Fenomena Penelitian
+       =============================== */
+    Fenomena [
+        label=<
+            <TABLE BORDER="0" CELLBORDER="0" CELLPADDING="8" CELLSPACING="0">
+                <TR>
+                    <TD ALIGN="CENTER">
+                        <FONT POINT-SIZE="18"><B>Fenomena Penelitian</B></FONT>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD ALIGN="LEFT">
+                        <FONT POINT-SIZE="16">
+                            Kompleksitas pelestarian bahan pustaka memiliki keterkaitan dengan tingkat produktivitas tenaga pelestarian.
+                        </FONT>
+                    </TD>
+                </TR>
+            </TABLE>
+        >,
+        fillcolor="#FFF3E0",
+        color="#FB8C00",
+        width=4.5
+    ];
+
+    /* ===============================
+       Fenomena Lapangan
+       =============================== */
+    FenomenaDetail [
+        label=<
+            <TABLE BORDER="0" CELLBORDER="0" CELLPADDING="8" CELLSPACING="0">
+                <TR>
+                    <TD ALIGN="CENTER">
+                        <FONT POINT-SIZE="18"><B>Fenomena Lapangan</B></FONT>
+                    </TD>
+                </TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">1. Tingkat kerusakan bahan pustaka langka tergolong tinggi (±88,49%), sehingga meningkatkan kompleksitas perbaikan dan konservasi.</FONT></TD></TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">2. Volume bahan pustaka yang besar belum sepenuhnya sebanding dengan jumlah tenaga pelestarian.</FONT></TD></TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">3. Proses pelestarian menuntut ketelitian, keterampilan teknis, serta koordinasi lintas unit kerja.</FONT></TD></TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">4. Produktivitas tenaga pelestarian belum sepenuhnya optimal ditinjau dari ketepatan waktu dan kepatuhan terhadap SOP.</FONT></TD></TR>
+            </TABLE>
+        >,
+        fillcolor="#FFF8E1",
+        color="#FB8C00",
+        width=6
+    ];
+
+    /* ===============================
+       Research Gap (tidak melebar)
+       =============================== */
+    Gap [
+    label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLPADDING="8" CELLSPACING="0">
+            <TR>
+                <TD ALIGN="CENTER">
+                    <FONT POINT-SIZE="18"><B>Research Gap</B></FONT>
+                </TD>
+            </TR>
+            <TR>
+                <TD ALIGN="JUSTIFY" WIDTH="300">
+                    <FONT POINT-SIZE="15">
+                        Penelitian empiris mengenai pengaruh kompleksitas pelestarian bahan pustaka terhadap produktivitas tenaga pelestarian masih terbatas, khususnya pada Pusat Preservasi Perpustakaan Nasional Republik Indonesia.
+                    </FONT>
+                </TD>
+            </TR>
+        </TABLE>
+    >,
+    fillcolor="#FCE4EC",
+    color="#C2185B",
+    width=3.5
+];
+
+
+    /* ===============================
+       Landasan Teori
+       =============================== */
+    subgraph cluster_teori {
+        label="Landasan Teori";
+        fontsize=16;
+        style=dashed;
+        color="#BDBDBD";
+        rank=same;
+
+        TeoriA [
+            label="Teori Kompleksitas Pekerjaan",
+            fontsize=15,
+            fillcolor="#E8F0FE",
+            color="#3366CC",
+            width=3.5
+        ];
+
+        TeoriB [
+            label="Teori Produktivitas",
+            fontsize=15,
+            fillcolor="#E8F5E9",
+            color="#2E7D32",
+            width=3.5
+        ];
+    }
+
+    /* ===============================
+       Indikator Variabel
+       =============================== */
+    IndikatorA [
+        label=<
+            <TABLE BORDER="0" CELLBORDER="0" CELLPADDING="8" CELLSPACING="0">
+                <TR><TD ALIGN="CENTER"><FONT POINT-SIZE="18"><B>Indikator Kompleksitas</B></FONT></TD></TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">1. Component Complexity</FONT></TD></TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">2. Coordinative Complexity</FONT></TD></TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">3. Dynamic Complexity</FONT></TD></TR>
+            </TABLE>
+        >,
+        fillcolor="#E8F0FE",
+        color="#3366CC",
+        width=3.5
+    ];
+
+    IndikatorB [
+        label=<
+            <TABLE BORDER="0" CELLBORDER="0" CELLPADDING="8" CELLSPACING="0">
+                <TR><TD ALIGN="CENTER"><FONT POINT-SIZE="18"><B>Indikator Produktivitas</B></FONT></TD></TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">1. Jumlah hasil kerja</FONT></TD></TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">2. Ketepatan waktu</FONT></TD></TR>
+                <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="15">3. Kualitas hasil sesuai SOP</FONT></TD></TR>
+            </TABLE>
+        >,
+        fillcolor="#E8F5E9",
+        color="#2E7D32",
+        width=3.5
+    ];
+
+    /* ===============================
+       Variabel Penelitian
+       =============================== */
+    subgraph cluster_variabel {
+        label="Variabel Penelitian";
+        fontsize=16;
+        style=dashed;
+        color="#BDBDBD";
+        rank=same;
+
+        X [
+            label="Variabel X:\nKompleksitas Pelestarian Bahan Pustaka",
+            fontsize=15,
+            fillcolor="#E8F0FE",
+            color="#3366CC",
+            width=3.5
+        ];
+
+        Y [
+            label="Variabel Y:\nProduktivitas Tenaga Pelestarian",
+            fontsize=15,
+            fillcolor="#E8F5E9",
+            color="#2E7D32",
+            width=3.5
+        ];
+    }
+
+    /* ===============================
+       Alur Hubungan Konseptual
+       =============================== */
+    Fenomena       -> FenomenaDetail;
+    FenomenaDetail -> Gap;
+
+    Gap            -> TeoriA;
+    Gap            -> TeoriB;
+
+    TeoriA         -> IndikatorA;
+    TeoriB         -> IndikatorB;
+
+    IndikatorA     -> X;
+    IndikatorB     -> Y;
+
+    X -> Y [
+        label="Pengaruh Kompleksitas Pelestarian Bahan Pustaka terhadap Produktivitas Tenaga Pelestarian",
+        fontsize=14,
+        penwidth=1.6
+    ];
+}
